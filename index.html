@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <title>Princy Bhatt | BCA Portfolio | School of Science and Technology, SRHU</title>
+  <meta name="description" content="Official portfolio of Princy Bhatt - BCA student at School of Science and Technology, Swami Rama Himalayan University (SRHU). Frontend Web Developer, UI/UX enthusiast, and programmer.">
+  <meta name="keywords" content="Princy Bhatt, Princy Bhatt SRHU, Princy Bhatt portfolio, BCA student Swami Rama Himalayan University, Frontend Developer, Web Designer">
+  <meta name="author" content="Princy Bhatt">
+
+  <!-- Favicon (SVG Glowing Badge) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%236366f1'/><text x='50%' y='63%' font-size='52' font-weight='bold' fill='white' text-anchor='middle' font-family='sans-serif'>PB</text></svg>">
+
+  <!-- FontAwesome 6 CDN for Crisp Vector Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Ambient Glow Effects in Background -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+  <div class="ambient-glow glow-3"></div>
+
+  <!-- Interactive Dynamic Particle Canvas -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- Scroll Progress Indicator Bar -->
+  <div class="scroll-progress-bar" id="scroll-progress"></div>
+
+  <!-- Custom Trailing Cursor (Desktop) -->
+  <div class="custom-cursor"></div>
+  <div class="custom-cursor-dot"></div>
+
+  <!-- ===================================================================
+       HEADER & NAVIGATION BAR
+       =================================================================== -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <!-- Brand Logo -->
+      <a href="#home" class="brand-logo" aria-label="Princy Bhatt Portfolio Home">
+        <div class="logo-badge">PB</div>
+        <span>Princy<span class="logo-dot">.</span></span>
+      </a>
+
+      <!-- Desktop & Mobile Navigation Links -->
+      <nav>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#terminal" class="nav-link">CLI</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav Actions (Theme Switcher & Mobile Toggle) -->
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Toggle Dark/Light Mode" title="Switch Theme">
+          <i class="fa-solid fa-sun"></i>
+        </button>
+
+        <a href="#contact" class="btn btn-primary btn-sm" style="display: none; @media(min-width: 640px) { display: inline-flex; }">
+          <i class="fa-regular fa-paper-plane"></i> Let's Talk
+        </a>
+
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================================================================
+       HERO SECTION
+       =================================================================== -->
+  <section class="hero-section" id="home">
+    <div class="container">
+      <div class="hero-grid">
+        
+        <!-- Left: Text Content -->
+        <div class="hero-content">
+          <div class="hero-status-pill">
+            <span class="status-indicator"></span>
+            <span>Open to Internships & Tech Opportunities</span>
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text">Princy Bhatt</span>
+          </h1>
+
+          <div class="hero-typing-wrap">
+            <span id="typing-text"></span>
+            <span class="typing-cursor">|</span>
+          </div>
+
+          <p class="hero-lead">
+            Currently pursuing <span class="university-highlight">BCA at School of Science and Technology, Swami Rama Himalayan University (SRHU)</span>. Dedicated to engineering sleek, high-performance web interfaces with intuitive user experiences and rock-solid code.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary">
+              <i class="fa-solid fa-laptop-code"></i> Explore My Work
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <i class="fa-regular fa-envelope"></i> Get In Touch
+            </a>
+            <a href="#about" class="btn btn-outline">
+              <i class="fa-solid fa-user-astronaut"></i> About Me
+            </a>
+          </div>
+
+          <div class="hero-socials">
+            <a href="https://github.com/princy-bhatt" target="_blank" rel="noopener noreferrer" class="hero-social-link" aria-label="GitHub Profile">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://linkedin.com/in/princy-bhatt" target="_blank" rel="noopener noreferrer" class="hero-social-link" aria-label="LinkedIn Profile">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="mailto:princybhatt.dev@gmail.com" class="hero-social-link" aria-label="Send Email">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+            <a href="https://codepen.io" target="_blank" rel="noopener noreferrer" class="hero-social-link" aria-label="CodePen Profile">
+              <i class="fa-brands fa-codepen"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: 3D-Look Profile Card & Floating Badges -->
+        <div class="hero-visual">
+          <div class="profile-card-wrapper">
+            <div class="profile-glow-ring"></div>
+
+            <!-- Floating Badges -->
+            <div class="floating-badge badge-top-right">
+              <i class="fa-solid fa-graduation-cap" style="color: var(--accent-secondary);"></i>
+              <span>SRHU • BCA 2024–27</span>
+            </div>
+
+            <div class="floating-badge badge-bottom-left">
+              <i class="fa-solid fa-code" style="color: var(--accent-pink);"></i>
+              <span>Modern Web & UI/UX</span>
+            </div>
+
+            <!-- Main Interactive Card -->
+            <div class="profile-card">
+              <div class="profile-header">
+                <div class="avatar-container">
+                  <span>PB</span>
+                  <div class="avatar-online-dot"></div>
+                </div>
+                <div class="profile-identity">
+                  <h3>Princy Bhatt</h3>
+                  <p>BCA Undergraduate Student</p>
+                </div>
+              </div>
+
+              <div class="profile-meta-list">
+                <div class="meta-item">
+                  <i class="fa-solid fa-building-columns"></i>
+                  <div>
+                    <small style="display:block; color:var(--text-muted); font-size:0.75rem;">COLLEGE</small>
+                    <strong>School of Science & Tech, SRHU</strong>
+                  </div>
+                </div>
+                <div class="meta-item">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <div>
+                    <small style="display:block; color:var(--text-muted); font-size:0.75rem;">LOCATION</small>
+                    <span>Dehradun, Uttarakhand, IN</span>
+                  </div>
+                </div>
+                <div class="meta-item">
+                  <i class="fa-solid fa-bullseye"></i>
+                  <div>
+                    <small style="display:block; color:var(--text-muted); font-size:0.75rem;">SPECIALIZATION</small>
+                    <span>Web Development & CS Core</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="profile-tags-label">Primary Tech Stack</div>
+              <div class="profile-tech-tags">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">C++</span>
+                <span class="tech-tag">SQL</span>
+                <span class="tech-tag">Git</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       ABOUT ME SECTION
+       =================================================================== -->
+  <section class="section" id="about">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="badge-tag">
+          <i class="fa-solid fa-sparkles"></i> Introduction
+        </span>
+        <h2 class="section-title">Driven by Curiosity, <span class="gradient-text">Powered by Code</span></h2>
+        <p class="section-subtitle">
+          Discover the motivation, academic journey, and passion that drives my pursuit of software development.
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <!-- Left: Detailed Bio -->
+        <div class="about-text-content">
+          <p class="about-lead-paragraph">
+            Hello! I am <strong style="color:var(--text-primary);">Princy Bhatt</strong>, an enthusiastic tech enthusiast currently pursuing my <strong>Bachelor of Computer Applications (BCA)</strong> at the prestigious <strong>School of Science and Technology in Swami Rama Himalayan University (SRHU)</strong>, Dehradun.
+          </p>
+
+          <p class="about-body-text">
+            My journey into computer science sparked from a desire to transform abstract concepts into interactive digital realities. I specialize in crafting clean, accessible, and responsive user interfaces using HTML, CSS, and modern JavaScript, coupled with structured problem-solving in languages like C++ and Python.
+          </p>
+
+          <p class="about-body-text">
+            At SRHU, I actively immerse myself in coursework covering Data Structures & Algorithms, Database Management Systems, and Object-Oriented Programming, while constantly building personal projects to bridge classroom theory with real-world industry practices.
+          </p>
+
+          <div class="about-highlights-grid">
+            <div class="highlight-box">
+              <i class="fa-solid fa-laptop-code"></i>
+              <h4>Frontend Craft</h4>
+              <p>Passionate about pixel-perfection, CSS layouts, and fluid micro-animations.</p>
+            </div>
+            <div class="highlight-box">
+              <i class="fa-solid fa-brain"></i>
+              <h4>Problem Solving</h4>
+              <p>Solid grasp of logic building, algorithms, and modular programming structures.</p>
+            </div>
+            <div class="highlight-box">
+              <i class="fa-solid fa-palette"></i>
+              <h4>UI / UX Aesthetics</h4>
+              <p>Designing modern user journeys with intuitive hierarchy and accessibility.</p>
+            </div>
+            <div class="highlight-box">
+              <i class="fa-solid fa-rocket"></i>
+              <h4>Lifelong Learner</h4>
+              <p>Always exploring modern web frameworks, developer tools, and best practices.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Animated Stats Cards -->
+        <div class="about-stats-panel">
+          <div class="glass-card stat-card">
+            <div class="stat-number" data-target="10" data-suffix="+">0</div>
+            <div class="stat-label">Projects Completed</div>
+          </div>
+
+          <div class="glass-card stat-card">
+            <div class="stat-number" data-target="500" data-suffix="+">0</div>
+            <div class="stat-label">Hours of Coding</div>
+          </div>
+
+          <div class="glass-card stat-card">
+            <div class="stat-number" data-target="9" data-suffix=".0+">0</div>
+            <div class="stat-label">Academic Excellence GPA</div>
+          </div>
+
+          <div class="glass-card stat-card">
+            <div class="stat-number" data-target="100" data-suffix="%">0</div>
+            <div class="stat-label">Dedication & Passion</div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       SKILLS SECTION
+       =================================================================== -->
+  <section class="section" id="skills" style="background: rgba(15, 23, 42, 0.3);">
+    <div class="container">
+
+      <div class="section-header">
+        <span class="badge-tag">
+          <i class="fa-solid fa-microchip"></i> Expertise
+        </span>
+        <h2 class="section-title">My Technical <span class="gradient-text">Arsenal</span></h2>
+        <p class="section-subtitle">
+          A blend of modern frontend frameworks, programming languages, database architectures, and engineering tools.
+        </p>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="skills-filter-nav">
+        <button class="filter-btn active" data-skill-filter="all">All Skills</button>
+        <button class="filter-btn" data-skill-filter="frontend">Frontend & Web</button>
+        <button class="filter-btn" data-skill-filter="languages">Programming Languages</button>
+        <button class="filter-btn" data-skill-filter="tools">Databases & Tools</button>
+      </div>
+
+      <!-- Skills Cards Grid -->
+      <div class="skills-grid">
+        
+        <!-- HTML5 -->
+        <div class="glass-card skill-card" data-category="frontend">
+          <div class="skill-header">
+            <div class="skill-info-left">
+              <div class="skill-icon-wrap html-icon">
+                <i class="fa-brands fa-html5"></i>
+              </div>
+              <div>
+                <h4 class="skill-name">HTML5</h4>
+                <span class="skill-category-badge">Frontend</span>
+              </div>
+            </div>
+            <span class="skill-percentage">95%</span>
+          </div>
+          <div class="skill-progress-track">
+            <div class="skill-progress-fill" data-progress="95"></div>
+          </div>
+          <p class="skill-desc">Semantic document structuring, modern Web APIs, SEO best practices, and accessible markup.</p>
+        </div>
+
+        <!-- CSS3 -->
+        <div class="glass-card skill-card" data-category="frontend">
+          <div class="skill-header">
+            <div class="skill-info-left">
+              <div class="skill-icon-wrap css-icon">
+                <i class="fa-brands fa-css3-alt"></i>
+              </div>
+              <div>
+                <h4 class="skill-name">CSS3 & Styling</h4>
+                <span class="skill-category-badge">Frontend</span>
+              </div>
+            </div>
+            <span class="skill-percentage">90%</span>
+          </div>
+          <div class="skill-progress-track">
+            <div class="skill-progress-fill" data-progress="90"></div>
+          </div>
+          <p class="skill-desc">Flexbox, CSS Grid layouts, glassmorphism, responsive media queries, and keyframe animations.</p>
+        </div>
+
+        <!-- JavaScript -->
+        <div class="glass-card skill-card" data-category="frontend">
+          <div class="skill-header">
+            <div class="skill-info-left">
+              <div class="skill-icon-wrap js-icon">
+                <i class="fa-brands fa-js"></i>
+              </div>
+              <div>
+                <h4 class="skill-name">JavaScript (ES6+)</h4>
+                <span class="skill-category-badge">Frontend / Scripting</span>
+              </div>
+            </div>
+            <span class="skill-percentage">85%</span>
+          </div>
+          <div class="skill-progress-track">
+            <div class="skill-progress-fill" data-progress="85"></div>
+          </div>
+          <p class="skill-desc">DOM manipulation, asynchronous code (Promises/Async-Await), Fetch API, and event architectures.</p>
+        </div>
+
+        <!-- Responsive UI/UX -->
+        <div class="glass-card skill-card" data-category="frontend">
+          <div class="skill-header">
+            <div class="skill-info-left">
+              <div class="skill-icon-wrap react-icon">
+                <i class="fa-solid fa-mobile-screen-button"></i>
+              </div>
+              <div>
+                <h4 class="skill-name">Responsive UI/UX</h4>
+                <span class="skill-category-badge">Design & Frontend</span>
+              </div>
+            </div>
+            <span class="skill-percentage">88%</span>
+          </div>
+          <div class="skill-progress-track">
+            <div class="skill-progress-fill" data-progress="88"></div>
+          </div>
+          <p class="skill-desc">Mobile-first design principles, user journey mapping, wireframing, and cross-browser fidelity.</p>
+        </div>
+
+        <!-- C / C++ -->
+        <div class="glass-card skill-card" data-category="languages">
+          <div class="skill-header">
+            <div class="skill-info-left">
+              <div class="skill-icon-wrap cpp-icon">
+                <i class="fa-solid fa-code"></i>
+              </div>
+              <div>
+                <h4 class="skill-name">C / C++</h4>
+                <span class="skill-category-badge">Core Language</span>
+              </div>
+            </div>
+            <span class="skill-percentage">82%</span>
+          </div>
+          <div class="skill-progress-track">
+            <div class="skill-progress-fill" data-progress="82"></div>
+          </div>
+          <p class="skill-desc">Pointers, memory management, Data Structures (linked lists, trees, stacks) and OOP principles.</p>
+        </div>
+
+        <!-- Python -->
+        <div class="glass-card skill-card" data-category="languages">
+          <div class="skill-header">
+            <div class="skill-info-left">
+              <div class="skill-icon-wrap python-icon">
+                <i class="fa-brands fa-python"></i>
+              </div>
+              <div>
+                <h4 class="skill-name">Python</h4>
+                <span class="skill-category-badge">Programming</span>
+              </div>
+            </div>
+            <span class="skill-percentage">80%</span>
+          </div>
+          <div class="skill-progress-track">
+            <div class="skill-progress-fill" data-progress="80"></div>
+          </div>
+          <p class="skill-desc">Scripting, algorithmic logic, file handling, automation, and basic backend processing.</p>
+        </div>
+
+        <!-- MySQL / DBMS -->
+        <div class="glass-card skill-card" data-category="tools">
+          <div class="skill-header">
+            <div class="skill-info-left">
+              <div class="skill-icon-wrap sql-icon">
+                <i class="fa-solid fa-database"></i>
+              </div>
+              <div>
+                <h4 class="skill-name">MySQL & DBMS</h4>
+                <span class="skill-category-badge">Databases</span>
+              </div>
+            </div>
+            <span class="skill-percentage">78%</span>
+          </div>
+          <div class="skill-progress-track">
+            <div class="skill-progress-fill" data-progress="78"></div>
+          </div>
+          <p class="skill-desc">Relational schema design, complex SQL queries, JOINs, normalization, and ACID transactions.</p>
+        </div>
+
+        <!-- Git & GitHub -->
+        <div class="glass-card skill-card" data-category="tools">
+          <div class="skill-header">
+            <div class="skill-info-left">
+              <div class="skill-icon-wrap git-icon">
+                <i class="fa-brands fa-git-alt"></i>
+              </div>
+              <div>
+                <h4 class="skill-name">Git & GitHub</h4>
+                <span class="skill-category-badge">Version Control</span>
+              </div>
+            </div>
+            <span class="skill-percentage">85%</span>
+          </div>
+          <div class="skill-progress-track">
+            <div class="skill-progress-fill" data-progress="85"></div>
+          </div>
+          <p class="skill-desc">Branching, merge workflows, pull requests, open-source collaboration, and GitHub Pages deployment.</p>
+        </div>
+
+        <!-- Figma & Design Tools -->
+        <div class="glass-card skill-card" data-category="tools">
+          <div class="skill-header">
+            <div class="skill-info-left">
+              <div class="skill-icon-wrap figma-icon">
+                <i class="fa-brands fa-figma"></i>
+              </div>
+              <div>
+                <h4 class="skill-name">Figma & Prototyping</h4>
+                <span class="skill-category-badge">UI/UX Tools</span>
+              </div>
+            </div>
+            <span class="skill-percentage">84%</span>
+          </div>
+          <div class="skill-progress-track">
+            <div class="skill-progress-fill" data-progress="84"></div>
+          </div>
+          <p class="skill-desc">High-fidelity UI mockups, auto-layout components, color theory, typography, and interactive prototypes.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       PROJECTS SECTION
+       =================================================================== -->
+  <section class="section" id="projects">
+    <div class="container">
+
+      <div class="section-header">
+        <span class="badge-tag">
+          <i class="fa-solid fa-code-fork"></i> Portfolio
+        </span>
+        <h2 class="section-title">Featured <span class="gradient-text">Creations</span></h2>
+        <p class="section-subtitle">
+          A collection of web apps, academic tools, and interface designs engineered with precision and modern best practices.
+        </p>
+      </div>
+
+      <!-- Project Filters -->
+      <div class="skills-filter-nav">
+        <button class="filter-btn active" data-project-filter="all">All Projects</button>
+        <button class="filter-btn" data-project-filter="web">Web Applications</button>
+        <button class="filter-btn" data-project-filter="ui">UI/UX & Systems</button>
+        <button class="filter-btn" data-project-filter="academic">Academic / Utilities</button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="projects-grid">
+        
+        <!-- Project 1: Campus Connect -->
+        <div class="glass-card project-card" data-project-category="academic">
+          <div class="project-banner">
+            <span class="project-category-pill">Academic Web App</span>
+            <div class="project-banner-visual">
+              <div class="banner-graphic">
+                <div class="banner-icon-circle" style="background: linear-gradient(135deg, #6366f1, #06b6d4);">
+                  <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <span class="banner-tagline">SRHU Student Hub & Noticeboard</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-content">
+            <h3 class="project-title">Campus Connect - Student Portal</h3>
+            <p class="project-description">
+              A comprehensive academic companion designed for university students to track lecture attendance, download syllabus notes, and view real-time department announcements.
+            </p>
+            <div class="project-tech-stack">
+              <span class="stack-chip">HTML5</span>
+              <span class="stack-chip">CSS3</span>
+              <span class="stack-chip">JavaScript ES6</span>
+              <span class="stack-chip">LocalStorage</span>
+            </div>
+            <div class="project-actions">
+              <button class="btn btn-outline btn-sm" data-project-id="campus-connect">
+                <i class="fa-regular fa-eye"></i> View Details
+              </button>
+              <a href="https://github.com/princy-bhatt/campus-connect" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                <span>Code</span> <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: FitTrack Habit & Health Tracker -->
+        <div class="glass-card project-card" data-project-category="web">
+          <div class="project-banner">
+            <span class="project-category-pill">Lifestyle App</span>
+            <div class="project-banner-visual">
+              <div class="banner-graphic">
+                <div class="banner-icon-circle" style="background: linear-gradient(135deg, #10b981, #06b6d4);">
+                  <i class="fa-solid fa-heart-pulse"></i>
+                </div>
+                <span class="banner-tagline">Daily Milestones & Habit Analytics</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-content">
+            <h3 class="project-title">FitTrack - Habit & Fitness Tracker</h3>
+            <p class="project-description">
+              Interactive lifestyle dashboard allowing users to track daily hydration, fitness goals, and study streaks with dynamic visual meters and dark/light mode adaptability.
+            </p>
+            <div class="project-tech-stack">
+              <span class="stack-chip">HTML5</span>
+              <span class="stack-chip">CSS Variables</span>
+              <span class="stack-chip">Vanilla JS</span>
+              <span class="stack-chip">Chart.js</span>
+            </div>
+            <div class="project-actions">
+              <button class="btn btn-outline btn-sm" data-project-id="fittrack">
+                <i class="fa-regular fa-eye"></i> View Details
+              </button>
+              <a href="https://github.com/princy-bhatt/fittrack" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                <span>Code</span> <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: OmniShop Modern Storefront -->
+        <div class="glass-card project-card" data-project-category="web">
+          <div class="project-banner">
+            <span class="project-category-pill">E-Commerce UI</span>
+            <div class="project-banner-visual">
+              <div class="banner-graphic">
+                <div class="banner-icon-circle" style="background: linear-gradient(135deg, #ec4899, #a855f7);">
+                  <i class="fa-solid fa-bag-shopping"></i>
+                </div>
+                <span class="banner-tagline">Responsive Shopping & Cart Experience</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-content">
+            <h3 class="project-title">OmniShop - Modern Storefront</h3>
+            <p class="project-description">
+              A high-converting e-commerce web platform featuring dynamic search filtering, responsive sliding cart drawer, coupon code calculation, and responsive checkout UI.
+            </p>
+            <div class="project-tech-stack">
+              <span class="stack-chip">HTML5</span>
+              <span class="stack-chip">CSS Grid</span>
+              <span class="stack-chip">JavaScript</span>
+              <span class="stack-chip">REST API Mock</span>
+            </div>
+            <div class="project-actions">
+              <button class="btn btn-outline btn-sm" data-project-id="omnishop">
+                <i class="fa-regular fa-eye"></i> View Details
+              </button>
+              <a href="https://github.com/princy-bhatt/omnishop" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                <span>Code</span> <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: DevFolio Design System -->
+        <div class="glass-card project-card" data-project-category="ui">
+          <div class="project-banner">
+            <span class="project-category-pill">UI Component Library</span>
+            <div class="project-banner-visual">
+              <div class="banner-graphic">
+                <div class="banner-icon-circle" style="background: linear-gradient(135deg, #a855f7, #3b82f6);">
+                  <i class="fa-solid fa-layer-group"></i>
+                </div>
+                <span class="banner-tagline">25+ Reusable Glassmorphism UI Snippets</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-content">
+            <h3 class="project-title">DevFolio - Glassmorphic UI System</h3>
+            <p class="project-description">
+              A clean frontend component library built purely with CSS custom properties and semantic markup, featuring accessible buttons, modals, input elements, and navigation cards.
+            </p>
+            <div class="project-tech-stack">
+              <span class="stack-chip">Figma</span>
+              <span class="stack-chip">Pure CSS3</span>
+              <span class="stack-chip">HTML5</span>
+              <span class="stack-chip">Design Tokens</span>
+            </div>
+            <div class="project-actions">
+              <button class="btn btn-outline btn-sm" data-project-id="devfolio">
+                <i class="fa-regular fa-eye"></i> View Details
+              </button>
+              <a href="https://github.com/princy-bhatt/devfolio-ui" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                <span>Code</span> <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5: CodeQuiz Interactive App -->
+        <div class="glass-card project-card" data-project-category="academic">
+          <div class="project-banner">
+            <span class="project-category-pill">EdTech Trivia</span>
+            <div class="project-banner-visual">
+              <div class="banner-graphic">
+                <div class="banner-icon-circle" style="background: linear-gradient(135deg, #f59e0b, #ef4444);">
+                  <i class="fa-solid fa-terminal"></i>
+                </div>
+                <span class="banner-tagline">Timed Computer Science Challenges</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-content">
+            <h3 class="project-title">CodeQuiz - CS Learning Game</h3>
+            <p class="project-description">
+              A gamified computer science quiz application featuring timed questions on C, C++, Data Structures, and Web development, accompanied by instant review and scoreboard tracking.
+            </p>
+            <div class="project-tech-stack">
+              <span class="stack-chip">JavaScript ES6</span>
+              <span class="stack-chip">HTML5</span>
+              <span class="stack-chip">CSS3</span>
+              <span class="stack-chip">JSON Database</span>
+            </div>
+            <div class="project-actions">
+              <button class="btn btn-outline btn-sm" data-project-id="codequiz">
+                <i class="fa-regular fa-eye"></i> View Details
+              </button>
+              <a href="https://github.com/princy-bhatt/codequiz" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                <span>Code</span> <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6: WeatherSphere Live App -->
+        <div class="glass-card project-card" data-project-category="web">
+          <div class="project-banner">
+            <span class="project-category-pill">API Integration</span>
+            <div class="project-banner-visual">
+              <div class="banner-graphic">
+                <div class="banner-icon-circle" style="background: linear-gradient(135deg, #06b6d4, #6366f1);">
+                  <i class="fa-solid fa-cloud-sun-rain"></i>
+                </div>
+                <span class="banner-tagline">Real-Time Global Weather Metrics</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-content">
+            <h3 class="project-title">WeatherSphere - Weather Dashboard</h3>
+            <p class="project-description">
+              A weather forecast web application fetching live meteorological data, 5-day forecasts, wind speeds, and UV index values from OpenWeather API with sleek dynamic backdrop visuals.
+            </p>
+            <div class="project-tech-stack">
+              <span class="stack-chip">HTML5</span>
+              <span class="stack-chip">CSS Glassmorphism</span>
+              <span class="stack-chip">Fetch API</span>
+              <span class="stack-chip">Async JS</span>
+            </div>
+            <div class="project-actions">
+              <button class="btn btn-outline btn-sm" data-project-id="weathersphere">
+                <i class="fa-regular fa-eye"></i> View Details
+              </button>
+              <a href="https://github.com/princy-bhatt/weathersphere" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                <span>Code</span> <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       EDUCATION & JOURNEY TIMELINE
+       =================================================================== -->
+  <section class="section" id="education" style="background: rgba(15, 23, 42, 0.3);">
+    <div class="container">
+
+      <div class="section-header">
+        <span class="badge-tag">
+          <i class="fa-solid fa-graduation-cap"></i> Milestones
+        </span>
+        <h2 class="section-title">Education & <span class="gradient-text">Journey</span></h2>
+        <p class="section-subtitle">
+          My academic roadmap, formal education, and continuous skill progression in Computer Applications.
+        </p>
+      </div>
+
+      <div class="timeline-container">
+        
+        <!-- Timeline Item 1: Swami Rama Himalayan University BCA -->
+        <div class="timeline-item">
+          <div class="timeline-icon-node">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+          <div class="glass-card timeline-card">
+            <div class="timeline-header-wrap">
+              <div>
+                <h3 class="timeline-title">Bachelor of Computer Applications (BCA)</h3>
+                <div class="timeline-institution">
+                  School of Science and Technology — Swami Rama Himalayan University (SRHU)
+                </div>
+                <div class="timeline-location">
+                  <i class="fa-solid fa-location-dot"></i> Jolly Grant, Dehradun, Uttarakhand, India
+                </div>
+              </div>
+              <span class="timeline-badge">2024 – Present (Enrolled)</span>
+            </div>
+
+            <p class="timeline-details">
+              Pursuing comprehensive computer application studies focused on software engineering, web application development, computational algorithms, and system architectures. Actively engaging in practical lab sessions, technical seminars, and hackathons.
+            </p>
+
+            <div style="font-size: 0.82rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px;">Key Coursework:</div>
+            <div class="timeline-coursework">
+              <span class="coursework-tag">Data Structures & Algorithms</span>
+              <span class="coursework-tag">Web Technologies (HTML/CSS/JS)</span>
+              <span class="coursework-tag">Database Management Systems (DBMS)</span>
+              <span class="coursework-tag">Object-Oriented Programming in C++</span>
+              <span class="coursework-tag">Computer Networks & Architecture</span>
+              <span class="coursework-tag">Software Engineering Principles</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline Item 2: Intermediate Schooling -->
+        <div class="timeline-item">
+          <div class="timeline-icon-node">
+            <i class="fa-solid fa-school"></i>
+          </div>
+          <div class="glass-card timeline-card">
+            <div class="timeline-header-wrap">
+              <div>
+                <h3 class="timeline-title">Senior Secondary Schooling (10+2)</h3>
+                <div class="timeline-institution">Science & Computer Science Stream</div>
+                <div class="timeline-location">
+                  <i class="fa-solid fa-location-dot"></i> Uttarakhand Board / CBSE
+                </div>
+              </div>
+              <span class="timeline-badge">Completed with Distinction</span>
+            </div>
+
+            <p class="timeline-details">
+              Completed senior secondary education with strong foundations in Mathematics, Physics, and Computer Science fundamentals, cultivating analytical problem-solving and logical deduction capabilities.
+            </p>
+          </div>
+        </div>
+
+        <!-- Timeline Item 3: Certifications & Continuous Learning -->
+        <div class="timeline-item">
+          <div class="timeline-icon-node">
+            <i class="fa-solid fa-award"></i>
+          </div>
+          <div class="glass-card timeline-card">
+            <div class="timeline-header-wrap">
+              <div>
+                <h3 class="timeline-title">Technical Certifications & Achievements</h3>
+                <div class="timeline-institution">Self-Directed Learning & Online Bootcamps</div>
+              </div>
+              <span class="timeline-badge">Ongoing Professional Growth</span>
+            </div>
+
+            <p class="timeline-details">
+              Actively mastering emerging frontend technologies, participating in collegiate coding contests, and building open-source repositories to stay ahead of software industry standards.
+            </p>
+            <div class="timeline-coursework">
+              <span class="coursework-tag">Responsive Web Design</span>
+              <span class="coursework-tag">JavaScript Algorithms</span>
+              <span class="coursework-tag">Git Version Control Masterclass</span>
+              <span class="coursework-tag">SRHU Tech Fest Participant</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       INTERACTIVE TERMINAL WIDGET ("Ask Princy / CLI")
+       =================================================================== -->
+  <section class="section interactive-terminal-section" id="terminal">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="badge-tag">
+          <i class="fa-solid fa-terminal"></i> Interactive Shell
+        </span>
+        <h2 class="section-title">Terminal <span class="gradient-text">Emulator</span></h2>
+        <p class="section-subtitle">
+          Prefer command lines? Interact directly with my simulated portfolio terminal. Type commands or click the shortcut chips below!
+        </p>
+      </div>
+
+      <div class="terminal-window">
+        <div class="terminal-header-bar">
+          <div class="terminal-controls">
+            <span class="t-dot red"></span>
+            <span class="t-dot yellow"></span>
+            <span class="t-dot green"></span>
+          </div>
+          <span class="terminal-title-text">princy@srhu-bca:~ (zsh)</span>
+          <span style="font-size:0.75rem; color:#8b949e;"><i class="fa-solid fa-wifi"></i> Online</span>
+        </div>
+
+        <div class="terminal-body">
+          <div class="terminal-output-log" id="terminal-log">
+            <p><span class="t-prompt">visitor@princy-bhatt:~$</span> <span class="t-command">welcome</span></p>
+            <div class="t-response">
+              Welcome to Princy Bhatt's interactive terminal! 🚀<br>
+              Student @ School of Science and Technology, Swami Rama Himalayan University.<br>
+              Type <span class="t-command">help</span> to view available commands.
+            </div>
+          </div>
+
+          <div class="terminal-input-row">
+            <span class="t-prompt">visitor@princy-bhatt:~$</span>
+            <input type="text" id="terminal-input" class="terminal-input-field" placeholder="Type 'help', 'bio', 'education', 'skills'..." autocomplete="off" spellcheck="false">
+          </div>
+
+          <div class="terminal-hint-buttons">
+            <button class="terminal-hint-btn" data-cmd="bio"><i class="fa-solid fa-user"></i> bio</button>
+            <button class="terminal-hint-btn" data-cmd="education"><i class="fa-solid fa-graduation-cap"></i> education</button>
+            <button class="terminal-hint-btn" data-cmd="skills"><i class="fa-solid fa-code"></i> skills</button>
+            <button class="terminal-hint-btn" data-cmd="projects"><i class="fa-solid fa-folder-open"></i> projects</button>
+            <button class="terminal-hint-btn" data-cmd="contact"><i class="fa-solid fa-envelope"></i> contact</button>
+            <button class="terminal-hint-btn" data-cmd="clear"><i class="fa-solid fa-trash-can"></i> clear</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       CONTACT SECTION
+       =================================================================== -->
+  <section class="section" id="contact">
+    <div class="container">
+
+      <div class="section-header">
+        <span class="badge-tag">
+          <i class="fa-solid fa-paper-plane"></i> Get In Touch
+        </span>
+        <h2 class="section-title">Let's Connect & <span class="gradient-text">Collaborate</span></h2>
+        <p class="section-subtitle">
+          Have an internship opportunity, project collaboration, or simply want to say hello? My inbox is always open!
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        
+        <!-- Left: Contact Details Cards -->
+        <div class="contact-info-panel">
+          
+          <div class="glass-card contact-card-item">
+            <div class="contact-icon-box">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="contact-details">
+              <h4>Direct Email</h4>
+              <a href="mailto:princybhatt.dev@gmail.com">princybhatt.dev@gmail.com</a>
+            </div>
+          </div>
+
+          <div class="glass-card contact-card-item">
+            <div class="contact-icon-box">
+              <i class="fa-solid fa-building-columns"></i>
+            </div>
+            <div class="contact-details">
+              <h4>Current University</h4>
+              <p class="contact-location-highlight">
+                School of Science and Technology<br>
+                Swami Rama Himalayan University (SRHU)<br>
+                Dehradun, Uttarakhand
+              </p>
+            </div>
+          </div>
+
+          <div class="glass-card contact-card-item">
+            <div class="contact-icon-box">
+              <i class="fa-solid fa-briefcase"></i>
+            </div>
+            <div class="contact-details">
+              <h4>Availability Status</h4>
+              <p style="color:var(--accent-emerald); font-weight:600;">
+                <i class="fa-solid fa-circle-check"></i> Open for Internships & Projects
+              </p>
+            </div>
+          </div>
+
+          <div class="glass-card contact-card-item">
+            <div class="contact-icon-box">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </div>
+            <div class="contact-details">
+              <h4>Professional Network</h4>
+              <a href="https://linkedin.com/in/princy-bhatt" target="_blank" rel="noopener noreferrer">linkedin.com/in/princy-bhatt</a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right: Interactive Contact Form -->
+        <div class="glass-card contact-form-card">
+          <form class="contact-form" id="contact-form">
+            <div class="form-group-row">
+              <div class="form-field">
+                <label for="contact-name">Your Full Name *</label>
+                <input type="text" id="contact-name" placeholder="e.g. Alex Sharma" required>
+              </div>
+              <div class="form-field">
+                <label for="contact-email">Your Email Address *</label>
+                <input type="email" id="contact-email" placeholder="e.g. alex@company.com" required>
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="contact-subject">Subject</label>
+              <input type="text" id="contact-subject" placeholder="Internship Opportunity / Project Inquiry">
+            </div>
+
+            <div class="form-field">
+              <label for="contact-message">Message *</label>
+              <textarea id="contact-message" placeholder="Hi Princy, I came across your portfolio and wanted to reach out regarding..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="align-self: flex-start; padding: 14px 34px;">
+              <i class="fa-solid fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       FOOTER
+       =================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      
+      <div class="footer-top-grid">
+        <div class="footer-brand">
+          <a href="#home" class="brand-logo">
+            <div class="logo-badge">PB</div>
+            <span>Princy Bhatt<span class="logo-dot">.</span></span>
+          </a>
+          <p>
+            BCA Student at School of Science and Technology, Swami Rama Himalayan University. Passionate about engineering thoughtful, accessible, and delightful digital experiences.
+          </p>
+          <div class="hero-socials">
+            <a href="https://github.com/princy-bhatt" target="_blank" rel="noopener noreferrer" class="hero-social-link" aria-label="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://linkedin.com/in/princy-bhatt" target="_blank" rel="noopener noreferrer" class="hero-social-link" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="mailto:princybhatt.dev@gmail.com" class="hero-social-link" aria-label="Email">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Navigation</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#skills">Technical Skills</a></li>
+            <li><a href="#projects">Featured Projects</a></li>
+            <li><a href="#education">Education & SRHU</a></li>
+            <li><a href="#contact">Get In Touch</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Academic Institution</h4>
+          <p style="color:var(--text-secondary); font-size:0.9rem; line-height:1.7;">
+            <strong>Swami Rama Himalayan University (SRHU)</strong><br>
+            School of Science & Technology<br>
+            Swami Ram Nagar, Jolly Grant<br>
+            Dehradun – 248016, Uttarakhand, India
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025–2026 Princy Bhatt. All rights reserved.</p>
+        <p>Built with <i class="fa-solid fa-heart" style="color: #ec4899;"></i> using HTML5, CSS3 & JavaScript</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ===================================================================
+       PROJECT DETAIL MODAL
+       =================================================================== -->
+  <div class="modal-overlay" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-box">
+      <div class="modal-header">
+        <div>
+          <span class="badge-tag" id="modal-category" style="margin-bottom:4px; font-size:0.75rem;">Category</span>
+          <h3 id="modal-title">Project Title</h3>
+        </div>
+        <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <p id="modal-description">Detailed description will appear here.</p>
+        <h4 style="font-size: 0.95rem; font-weight:700; color:var(--text-primary); margin-bottom:8px;">Key Capabilities & Features:</h4>
+        <ul class="modal-features-list" id="modal-features"></ul>
+
+        <h4 style="font-size: 0.95rem; font-weight:700; color:var(--text-primary); margin-top:16px; margin-bottom:8px;">Technologies Utilized:</h4>
+        <div class="project-tech-stack" id="modal-stack"></div>
+      </div>
+
+      <div class="modal-footer">
+        <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" id="modal-github-btn">
+          <i class="fa-brands fa-github"></i> View GitHub Repo
+        </a>
+        <button class="btn btn-primary btn-sm" id="modal-demo-btn">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i> Test Interaction
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================================
+       TOAST NOTIFICATION CONTAINER
+       =================================================================== -->
+  <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+  <!-- ===================================================================
+       BACK TO TOP FLOATING BUTTON
+       =================================================================== -->
+  <button class="back-to-top-btn" id="back-to-top" aria-label="Scroll back to top" title="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>
+
